@@ -1,0 +1,11 @@
+{
+  "name": "wetubestudy",
+  "version": "1.0.0",
+  "description": "clonning youtube",
+  "main": "index.js",
+  "author": "wooseung",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
