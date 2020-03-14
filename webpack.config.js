@@ -28,8 +28,13 @@ const config = {
           {
             loader: "postcss-loader",
             options: {
-              plugin() {
-                return [autoprefixer({ browsers: "cover 99.5%" })];
+              plugins() {
+                return [
+                  autoprefixer({
+                    grid: true,
+                    overrideBrowserslist: "cover 99.5%"
+                  })
+                ];
               }
             }
           },
