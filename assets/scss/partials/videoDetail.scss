@@ -17,25 +17,36 @@
       font-weight: bold;
     }
     .video__title {
+      margin: 10px 0;
       font-size: 20px;
-      margin-bottom: 10px;
-      color:black;
+      color: black;
     }
-    .video__views{
+    .video__views {
       display: inline-block;
       font-size: 13px;
       margin-bottom: 10px;
+      padding-bottom: 10px;
+      border-bottom: 1px solid $dark-grey;
+      width: 100%;
     }
-    .video__description{
+    .video__description {
+      margin: 10px 0;
       font-size: 18px;
     }
+    .video__author {
+      display: flex;
+      justify-content: left;
+      a {
+        position: static;
+      }
+    }
   }
-  .video__comments{
+  .video__comments {
     width: 100%;
     margin-top: 30px;
     font-size: 18px;
     font-weight: bold;
-    display:flex;
+    display: flex;
     justify-content: center;
   }
 }
