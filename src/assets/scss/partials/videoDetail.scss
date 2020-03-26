@@ -6,7 +6,8 @@
     width: 80%;
     .videoPlayer {
       width: 100%;
-      height: 46%;
+      height: 40%;
+      max-height: 900px;
       margin: 10px 0;
       video {
         width: 100%;
