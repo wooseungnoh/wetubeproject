@@ -5,6 +5,7 @@ import helmet from "helmet";
 import cookieParser from "cookie-parser";
 import bodyParser from "body-parser";
 import path from "path";
+import flash from "express-flash";
 import passport from "passport";
 import mongoose from "mongoose";
 import session from "express-session";
@@ -41,6 +42,7 @@ app.use(
 );
 app.use(passport.initialize());
 app.use(passport.session());
+app.use(flash())
 
 app.use(localsMiddleware);
 
