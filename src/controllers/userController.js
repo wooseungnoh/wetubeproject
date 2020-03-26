@@ -39,12 +39,10 @@ export const postLogin = passport.authenticate("local", {
   successFlash: "환영합니다!",
   failureFlash: "아이디 혹은 비밀번호를 다시 확인해 주세요"
 });
-
 export const githubLogin = passport.authenticate("github", {
   successFlash: "환영합니다!(깃허브 로그인)",
   failureFlash: "로그인 할 수 없습니다."
 });
-
 export const githubLoginCallback = async (_, __, profile, cb) => {
   const {
     _json: { id, avatar_url: avatarUrl, name, email }
