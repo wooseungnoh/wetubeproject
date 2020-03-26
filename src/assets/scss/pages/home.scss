@@ -1,12 +1,13 @@
-.home-title{
+.home-title {
   margin: 10px 0;
   font-weight: bold;
   font-size: 20px;
 }
-  
+
 .home-videos {
   display: grid;
   grid-template-columns: repeat(6, minmax(150px, 1fr));
+  grid-template-rows: 400px 200px;
   grid-gap: 30px;
   .videoBlock:first-child,
   .videoBlock:nth-child(2) {
@@ -16,4 +17,5 @@
   .videoBlock:nth-child(4),
   .videoBlock:nth-child(5) {
     grid-column: span 2;
-  }}
+  }
+}
