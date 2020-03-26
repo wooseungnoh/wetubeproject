@@ -185,7 +185,7 @@ function init() {
   fullScrnBtn.addEventListener("click", goFullScreen);
   playBtn.addEventListener("click", handlePlayClick);
   volumeBtn.addEventListener("click", handleVolumeClick);
-  videoPlayer.addEventListener("loadedmetadata", setTotalTime);
+  videoPlayer.addEventListener("loadedmetadata", setTotalTime());
   videoPlayer.addEventListener("ended", handleEnded);
   playGauge.addEventListener("click", event => {
     changePlayTime(event);
