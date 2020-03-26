@@ -1,0 +1,49 @@
+.user-profile {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  h3{
+    align-self: baseline;
+    margin: 10px;
+    font-size: 15px;
+  }
+  .user-profile__header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 30px;
+    .profile__username {
+      font-size: 25px;
+      margin: 30px;
+    }
+  }
+  .user-profile__btns {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 50px;
+    a:not(:last-child) {
+      margin-bottom: 20px;
+    }
+    button {
+      width: 400px;
+      height: 40px;
+      color: #fff;
+      border: none;
+      background-color: #2585d8;
+      border-radius: 5px;
+      text-transform: uppercase;
+      box-shadow: 3px 3px 5px #29292986;
+      font-weight: bold;
+      cursor: pointer;
+    }
+  }
+  .profile-videos{
+    min-width: 100%;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-auto-rows: 200px;
+    row-gap: 70px;
+  }
+}

@@ -1,0 +1,42 @@
+extends layouts/main
+include mixins/videoPlayer
+
+block content
+    .video-detail__container
+        div.info__container
+            +videoPlayer({
+                src:video.fileUrl
+            })
+            .video__info
+                div.button__edit
+                    if loggedUser && video.creator.id === loggedUser.id
+                        a(href=routes.editVideo(video.id)) Edit Video
+                h5.video__title=video.title
+                span.video__views=`조회수 ${video.views} 회`
+                span.video__author
+                    |Uploaded by 
+                    a(href=routes.userDetail(video.creator.id))=video.creator.name
+                p.video__description=video.description
+            .video__comments
+                if video.comments.length === 1
+                    span.video__comment-number
+                        span#jsCommentNumber 1
+                        |   comment
+                else
+                    span.video__comment-number
+                        span#jsCommentNumber=video.comments.length
+                        |   comments
+                form.add__comment#jsAddComment
+                    input(type="text", placeholder="공개 댓글 추가")
+                    button 추가
+                ul.video__comments-list#jsCommentList
+                    each comment in video.comments.reverse()
+                        li
+                            div
+                                span.comment__author
+                                    a(href=routes.userDetail(comment.creator))=comment.name
+                                    span.createAt #{String(comment.createdAt).split("GMT")[0]}
+                                span.comment__text=comment.text
+                                
+                            if loggedUser && String(comment.creator) === String(loggedUser.id)
+                                button(name=comment._id)#delBtn 삭제
